@@ -40,7 +40,7 @@ header h2.first {
     margin-left: 15%;
 }
 header .imgContainer {
-    background: url(./assets/pp_kisuke.jpg) no-repeat center/cover;
+    background: url(./assets/pp.jpg) no-repeat center/cover;
     width: 22vw;
     height: 22vw;
     border-radius: 50%;
@@ -78,6 +78,9 @@ header .imgContainer {
     display: flex;
     flex-direction: column;
 }
+
+/* Bio bubble */
+
 .bubbles .bioContainer {
     border: 2px solid #219ebc;
     box-shadow: 4px 4px 20px #f5f5fa2d;
@@ -90,11 +93,20 @@ header .imgContainer {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    background: url(./assets/icons/resume.png) no-repeat;
-    background-size: 4vw ;
-    background-position: 56% 50%;
+    transition: 0.4s ease-in-out;
 }
+
+.bubbles .bioContainer img {
+    margin-left: 8%;
+    width: 4vw;
+}
+.bubbles .bioContainer:hover {
+    background: #219ebc;
+    transform: translateX(-42%) scale(1.1);
+}
+
+/* School bubble */
+
 .bubbles .diplomaContainer {
     border: 2px solid #219ebc;
     box-shadow: 4px 4px 20px #f5f5fa2d;
@@ -107,11 +119,19 @@ header .imgContainer {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    background: url(./assets/icons/diploma.png) no-repeat;
-    background-size: 2.5vw ;
-    background-position: 50% 50%;
+    transition: 0.4s ease-in-out;
 }
+.bubbles .diplomaContainer img {
+    width: 2vw;
+}
+
+.bubbles .diplomaContainer:hover {
+    background: #219ebc;
+    transform: translateX(-58%) scale(1.1);
+}
+
+/* Projects bubble */
+
 .bubbles .projectsContainer {
     border: 2px solid #219ebc;
     box-shadow: 4px 4px 20px #f5f5fa2d;
@@ -124,11 +144,19 @@ header .imgContainer {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    background: url(./assets/icons/work.png) no-repeat;
-    background-size: 8vw ;
-    background-position: 50% 50%;
+    transition: 0.4s ease-in-out;
 }
+.bubbles .projectsContainer img {
+    width: 8vw;
+}
+
+.bubbles .projectsContainer:hover {
+    background: #219ebc;
+    transform: translateX(-42%) scale(1.1);
+}
+
+/* Hobbies bubble */
+
 .bubbles .hobbiesContainer {
     border: 2px solid #219ebc;
     box-shadow: 4px 4px 20px #f5f5fa2d;
@@ -142,11 +170,19 @@ header .imgContainer {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    background: url(./assets/icons/hobby.png) no-repeat;
-    background-size: 6vw ;
-    background-position: 50% 50%;
+    transition: 0.4s ease-in-out;
 }
+.bubbles .hobbiesContainer img {
+    width: 6vw;
+}
+
+.bubbles .hobbiesContainer:hover {
+    background: #219ebc;
+    transform: translateX(-58%) scale(1.1);
+}
+
+/* Professionnal bubble */
+
 .bubbles .proContainer {
     border: 2px solid #219ebc;
     box-shadow: 4px 4px 20px #f5f5fa2d;
@@ -159,10 +195,15 @@ header .imgContainer {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
 
-    background: url(./assets/icons/xp.png) no-repeat;
-    background-size: 2.5vw ;
-    background-position: 50% 50%;
+.bubbles .proContainer img {
+    width: 2vw;
+}
+.bubbles .proContainer:hover {
+    background: #219ebc;
+    transform: translateX(-50%) scale(1.1);
 }
 
 /* Design footer */
@@ -193,15 +234,41 @@ footer {
 footer .footer {
     text-align: center;
     color: #f5f5fa;
+    width: 50%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
     font-weight: lighter;
 }
-footer .footer h2 {
+footer h2 {
     font-size: 3vw;
+    color: #f5f5fa;
+    position: absolute;
     font-weight: lighter;
+    height: fit-content;
 }
-footer .footer img {
-    width: 60px;
-    margin: 2rem;
+footer .footer .logo1, footer .footer .logo2, footer .footer .logo3 {
+    width: 80px;
+    padding: 1rem;
+    margin: 5rem 2rem 0 2rem;
+
     filter: invert(1) opacity(0.75);
     cursor: pointer;
+    transition: 0.4s ease-in-out;
+    border-radius: 50%;
+
+    animation: rotation 2s linear infinite both;
+}
+footer .footer img {
+    width: 2vw;
+}
+footer .footer .logo1:hover,
+footer .footer .logo2:hover,
+footer .footer .logo3:hover{
+    background-color: #219ebc;
+}
+@keyframes rotation {
+    0%{transform: rotate(15deg);}
+    50%{transform: rotate(-15deg);}
+    100%{transform: rotate(15deg);}
 }

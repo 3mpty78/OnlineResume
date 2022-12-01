@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    user-select: none;
+}
+
+body {
+    background: linear-gradient(90deg,#22232a 0%, #353541 80%);
+    min-height: 100vh;
+}
+
+/* Title design */
+
+header {
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 3rem;
+}
+header h2 {
+    font-size: 10vw;
+    width: fit-content;
+}
+header h2.last {
+    color: #219ebc;
+    text-shadow: 10px 10px 20px #16161aa8;
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+header h2.first {
+    color: #f5f5fa;
+    font-weight:lighter;
+    text-shadow: 10px 10px 20px #16161aa8;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    margin-left: 15%;
+}
+header .imgContainer {
+    background: url(./assets/pp_kisuke.jpg) no-repeat center/cover;
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    margin-left: 65%;
+    position: absolute;
+    margin-top: 5rem;
+    border-bottom: 3px solid #219ebc;
+    box-shadow: 6px 6px 20px #16161aa8;
+    animation: kisuke 3s linear infinite both;
+}
+@keyframes kisuke {
+    0%{transform: rotate(5deg);}
+    50%{transform: rotate(-5deg);}
+    100%{transform: rotate(5deg);}
+}
+
+.border {
+    width: 75%;
+    margin-left: 50%;
+    height: 2px;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    transform: translateX(-50%);
+    border-top: 1px solid #219ebc;
+    box-shadow: 0 5px 20px #16161aa8;
+}
+
+/* Bubbles design */
+
+.bubbles {
+    margin-top: 5rem;
+    padding: 1.5rem;
+    color: #f5f5fa;
+    font-weight: lighter;
+    display: flex;
+    flex-direction: column;
+}
+.bubbles .bioContainer {
+    border: 2px solid #219ebc;
+    box-shadow: 4px 4px 20px #f5f5fa2d;
+    width: 8vw;
+    height: 8vw;
+    margin-left: 42%;
+    transform: translateX(-42%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background: url(./assets/icons/resume.png) no-repeat;
+    background-size: 4vw ;
+    background-position: 56% 50%;
+}
+.bubbles .diplomaContainer {
+    border: 2px solid #219ebc;
+    box-shadow: 4px 4px 20px #f5f5fa2d;
+    width: 5vw;
+    height: 5vw;
+    margin-left: 58%;
+    transform: translateX(-58%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background: url(./assets/icons/diploma.png) no-repeat;
+    background-size: 2.5vw ;
+    background-position: 50% 50%;
+}
+.bubbles .projectsContainer {
+    border: 2px solid #219ebc;
+    box-shadow: 4px 4px 20px #f5f5fa2d;
+    width: 15vw;
+    height: 15vw;
+    margin-left: 42%;
+    transform: translateX(-42%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background: url(./assets/icons/work.png) no-repeat;
+    background-size: 8vw ;
+    background-position: 50% 50%;
+}
+.bubbles .hobbiesContainer {
+    border: 2px solid #219ebc;
+    box-shadow: 4px 4px 20px #f5f5fa2d;
+    width: 12vw;
+    height: 12vw;
+    margin-top: -4rem;
+    margin-left: 58%;
+    transform: translateX(-58%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background: url(./assets/icons/hobby.png) no-repeat;
+    background-size: 6vw ;
+    background-position: 50% 50%;
+}
+.bubbles .proContainer {
+    border: 2px solid #219ebc;
+    box-shadow: 4px 4px 20px #f5f5fa2d;
+    width: 5vw;
+    height: 5vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background: url(./assets/icons/xp.png) no-repeat;
+    background-size: 2.5vw ;
+    background-position: 50% 50%;
+}
+
+/* Design footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #22232a8e;
+    box-shadow: 0px -5px 20px #f5f5fa1a;
+    height: fit-content;
+    padding: 2rem;
+}
+.piedpage {
+    width: 100%;
+    height: 1px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5rem;
+    border-top: 1px solid rgba(182, 66, 46, 0.767);
+    animation: piedpage 4s linear infinite;
+}
+@keyframes piedpage {
+    0%{width: 100%;}
+    50%{width: 25%;}
+    100%{width: 100%;}
+}
+
+footer .footer {
+    text-align: center;
+    color: #f5f5fa;
+    font-weight: lighter;
+}
+footer .footer h2 {
+    font-size: 3vw;
+    font-weight: lighter;
+}
+footer .footer img {
+    width: 60px;
+    margin: 2rem;
+    filter: invert(1) opacity(0.75);
+    cursor: pointer;
+}

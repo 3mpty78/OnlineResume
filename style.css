@@ -10,10 +10,65 @@
 }
 
 body {
-    background: linear-gradient(90deg,#22232a 0%, #353541 80%);
+    /* background: linear-gradient(90deg,#22232a 0%, #353541 80%); */
+    background: linear-gradient(135deg, hsla(232, 11%, 15%, 1) 30%, hsla(0, 5%, 16%, 1) 100%);
     min-height: 100vh;
 }
 
+/* Loader */
+
+.loaderContainer {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    width: 100%;
+    height: 100vh;
+    background: #131416;
+}
+.ring {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    animation: ring 2s linear infinite;
+}
+@keyframes ring {
+    0%{ transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #219ebc;}
+    50%{transform: rotate(180deg);
+        box-shadow: 1px 5px 2px rgba(182, 66, 46, 0.767);}
+    100%{   transform: rotate(360deg);
+            box-shadow: 1px 5px 2px #219ebc;}
+}
+.ring::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+span {
+    color: #f5f5fa;
+    font-size: 1vw;
+    filter: opacity(1);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 200px;
+    animation: loading 3s ease-in-out infinite;
+}
+@keyframes loading {
+    50%{filter: opacity(0);}
+}
+.fondu-out {
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+    z-index: 0;
+}
 /* Title design */
 
 header {
@@ -28,16 +83,18 @@ header h2 {
 header h2.last {
     color: #219ebc;
     text-shadow: 10px 10px 20px #16161aa8;
-    margin-top: 5rem;
+    margin-top: -10rem;
     margin-left: 5rem;
+    transition: 1s ease-in-out;
 }
 header h2.first {
     color: #f5f5fa;
     font-weight:lighter;
     text-shadow: 10px 10px 20px #16161aa8;
-    margin-top: 0;
+    margin-top: -10rem;
     margin-bottom: 2.5rem;
     margin-left: 15%;
+    transition: 1s ease-in-out;
 }
 header .imgContainer {
     background: url(./assets/pp.jpg) no-repeat center/cover;
@@ -58,7 +115,7 @@ header .imgContainer {
 }
 
 .border {
-    width: 75%;
+    width: 0%;
     margin-left: 50%;
     height: 2px;
     margin-top: 1.5rem;
@@ -66,6 +123,8 @@ header .imgContainer {
     transform: translateX(-50%);
     border-top: 1px solid #219ebc;
     box-shadow: 0 5px 20px #16161aa8;
+    z-index: -5;
+    transition: 2.5s ease-in-out;
 }
 
 /* Bubbles design */
@@ -83,7 +142,7 @@ header .imgContainer {
 
 .bubbles .bioContainer {
     border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa2d;
+    box-shadow: 4px 4px 20px #f5f5fa1c;
     width: 8vw;
     height: 8vw;
     margin-left: 42%;
@@ -109,7 +168,7 @@ header .imgContainer {
 
 .bubbles .diplomaContainer {
     border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa2d;
+    box-shadow: 4px 4px 20px #f5f5fa1c;
     width: 5vw;
     height: 5vw;
     margin-left: 58%;
@@ -134,7 +193,7 @@ header .imgContainer {
 
 .bubbles .projectsContainer {
     border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa2d;
+    box-shadow: 4px 4px 20px #f5f5fa1c;
     width: 15vw;
     height: 15vw;
     margin-left: 42%;
@@ -159,7 +218,7 @@ header .imgContainer {
 
 .bubbles .hobbiesContainer {
     border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa2d;
+    box-shadow: 4px 4px 20px #f5f5fa1c;
     width: 12vw;
     height: 12vw;
     margin-top: -4rem;
@@ -185,7 +244,7 @@ header .imgContainer {
 
 .bubbles .proContainer {
     border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa2d;
+    box-shadow: 4px 4px 20px #f5f5fa1c;
     width: 5vw;
     height: 5vw;
     margin-left: 50%;
@@ -215,6 +274,7 @@ footer {
     box-shadow: 0px -5px 20px #f5f5fa1a;
     height: fit-content;
     padding: 2rem;
+    bottom: 0;
 }
 .piedpage {
     width: 100%;

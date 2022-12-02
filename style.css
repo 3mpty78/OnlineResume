@@ -129,142 +129,286 @@ header .imgContainer {
     transition: 2.5s ease-in-out;
 }
 
-/* Bubbles design */
+/* Timeline design */
 
-.bubbles {
-    margin-top: 5rem;
+.timelineContainer {
+    margin: 5rem;
     padding: 1.5rem;
-    color: #f5f5fa;
-    font-weight: lighter;
     display: flex;
     flex-direction: column;
-}
-
-/* Bio bubble */
-
-.bubbles .bioContainer {
-    border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa1c;
-    width: 8vw;
-    height: 8vw;
-    margin-left: 42%;
-    transform: translateX(-42%);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+}
+.timelineContainer #timeline {
+    width: 0.3vw;
+    min-height: 180vh;
+    background: #219ebc;
+    border-radius: 10px;
 }
 
-.bubbles .bioContainer img {
-    margin-left: 8%;
+/* Design section 2014 */
+
+.timelineContainer .school,
+.timelineContainer .versailles,
+.timelineContainer .tarbes,
+.timelineContainer .maisalf,
+.timelineContainer .dev {
+    position: absolute;
+    color: #f5f5fa;
+    width: 30vw;
+    height: fit-content;
+    padding: 1.5rem;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    text-shadow: 10px 10px 20px #16161aa8;
+}
+.timelineContainer h2 {
+    color: #219ebc;
+    padding-bottom: 1rem;
+}
+.school {
+    margin-left: 40%;
+    margin-top: 10%;
+    border-right: 2px solid #219ebc;
+}
+.school .tooLong {
+    font-size: 1.2vw;
+    padding-top: 0.5rem;
+}
+.school img {
+    width: 5vw;
+    position: absolute;
+    margin-left: 75%;
+    filter: invert(1) opacity(0.75);
+}
+
+/* 2016 */
+
+.versailles {
+    margin-right: 40%;
+    margin-top: 25%;
+    border-left: 2px solid #219ebc;
+}
+.versailles img {
     width: 4vw;
-}
-.bubbles .bioContainer:hover {
-    background: #219ebc;
-    transform: translateX(-42%) scale(1.1);
+    position: absolute;
+    margin-left: 75%;
+    filter: invert(1) opacity(0.75);
 }
 
-/* School bubble */
+/* 2018 */
 
-.bubbles .diplomaContainer {
-    border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa1c;
+.tarbes {
+    margin-left: 40%;
+    margin-top: 40%;
+    border-right: 2px solid #219ebc;
+}
+.tarbes img {
+    width: 4vw;
+    position: absolute;
+    margin-left: 75%;
+    filter: invert(1) opacity(0.75);
+}
+
+/* 2019 */
+
+.maisalf {
+    margin-right: 40%;
+    margin-top: 55%;
+    border-left: 2px solid #219ebc;
+}
+.maisalf img {
+    width: 4vw;
+    position: absolute;
+    margin-left: 75%;
+    filter: invert(1) opacity(0.75);
+}
+
+/* 2022 */
+
+.dev {
+    margin-left: 40%;
+    margin-top: 70%;
+    border-right: 2px solid #219ebc;
+}
+.dev img {
     width: 5vw;
-    height: 5vw;
-    margin-left: 58%;
-    transform: translateX(-58%);
-    border-radius: 50%;
+    position: absolute;
+    margin-left: 75%;
+    filter: invert(1) opacity(0.75);
+}
+
+/* Design section realisations */
+
+.timelineContainer .realisations {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3);
+    grid-template-rows: repeat(2);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    color: #f5f5fa;
+    width: fit-content;
+    height: fit-content;
+    padding: 1.5rem;
+    font-size: 1.3vw;
+    font-weight: lighter;
+    text-shadow: 10px 10px 20px #16161aa8;
+    margin-top: 4%;
+    margin-bottom: 5rem;
+
+    box-shadow: 0 -5px 20px 0 #f5f5fa1a;
+    border-radius: 25px;
+    transition: 0.4s ease;
+    animation: shadowAround 2s linear infinite both;
+}
+.realisations h2 {
+    padding: 1.5rem;
+    font-size: 5vw;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+/* Design First Card */
+
+.realisations .firstCard {
+    text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+    padding: 1.5rem;
+    grid-area: 2 / 1 / 3 / 2;
 }
-.bubbles .diplomaContainer img {
-    width: 2vw;
-}
-
-.bubbles .diplomaContainer:hover {
-    background: #219ebc;
-    transform: translateX(-58%) scale(1.1);
-}
-
-/* Projects bubble */
-
-.bubbles .projectsContainer {
-    border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa1c;
-    width: 15vw;
+.realisations .firstCard .zenifineContainer {
+    background: url(./assets/zenifine.png) no-repeat left/cover;
+    border-radius: 25px;
+    width: 22.5vw;
     height: 15vw;
-    margin-left: 42%;
-    transform: translateX(-42%);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
     transition: 0.4s ease-in-out;
-}
-.bubbles .projectsContainer img {
-    width: 8vw;
+    box-shadow: 10px 10px 20px #16161aa8;
 }
 
-.bubbles .projectsContainer:hover {
-    background: #219ebc;
-    transform: translateX(-42%) scale(1.1);
+/* Design Second Card */
+
+.realisations .secondCard {
+    text-align: center;
+    padding: 1.5rem;
+    grid-area: 2 / 2 / 3 / 3;
 }
-
-/* Hobbies bubble */
-
-.bubbles .hobbiesContainer {
-    border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa1c;
-    width: 12vw;
-    height: 12vw;
-    margin-top: -4rem;
-    margin-left: 58%;
-    transform: translateX(-58%);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.realisations .secondCard .weeatContainer {
+    background: url(./assets/weeat.png) no-repeat center/cover;
+    border-radius: 25px;
+    width: 22.5vw;
+    height: 15vw;
     transition: 0.4s ease-in-out;
-}
-.bubbles .hobbiesContainer img {
-    width: 6vw;
+    box-shadow: 10px 10px 20px #16161aa8;
 }
 
-.bubbles .hobbiesContainer:hover {
-    background: #219ebc;
-    transform: translateX(-58%) scale(1.1);
+/* Design Third Card */
+
+.realisations .thirdCard {
+    text-align: center;
+    padding: 1.5rem;
+    grid-area: 2 / 3 / 3 / 4;
 }
-
-/* Professionnal bubble */
-
-.bubbles .proContainer {
-    border: 2px solid #219ebc;
-    box-shadow: 4px 4px 20px #f5f5fa1c;
-    width: 5vw;
-    height: 5vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.realisations .thirdCard .gameContainer {
+    background: url(./assets/game.png) no-repeat center/cover;
+    border-radius: 25px;
+    width: 22.5vw;
+    height: 15vw;
+    filter: grayscale(0);
     transition: 0.4s ease-in-out;
 }
 
-.bubbles .proContainer img {
-    width: 2vw;
+.realisations .firstCard h3, 
+.realisations .secondCard h3, 
+.realisations .thirdCard h3 {
+    margin: 1.5rem;
+    font-size: 1.5vw;
 }
-.bubbles .proContainer:hover {
+/* Hover effects & animations */
+
+.timelineContainer .school:hover,
+.timelineContainer .versailles:hover,
+.timelineContainer .tarbes:hover,
+.timelineContainer .maisalf:hover,
+.timelineContainer .dev:hover {
+    box-shadow: 0 -5px 20px 0 #f5f5fa1a;
+    border-radius: 25px;
+    transition: 0.4s ease;
+    transform: scale(1.1);
+    animation: shadowAround 2s linear infinite both;
+}
+@keyframes shadowAround {
+    0%{box-shadow: 0 -10px 20px 0 #f5f5fa1a;}
+    25%{box-shadow: 10px 0 20px 0 #f5f5fa1a;}
+    50%{box-shadow: 0 10px 20px 0 #f5f5fa1a;}
+    75%{box-shadow: -10px 0 20px 0 #f5f5fa1a;}
+    100%{box-shadow: 0 -10px 20px 0 #f5f5fa1a;}
+}
+.realisations .firstCard .zenifineContainer:hover,
+.realisations .secondCard .weeatContainer:hover {
+    cursor: not-allowed;
+    transform: scale(1.2);
+    filter: grayscale(0.75);
+}
+.realisations .thirdCard .gameContainer:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 10px 10px 20px #16161aa8;
+    filter: blur(0) grayscale(0);
+}
+
+/* Mini timeline design */
+
+.timelineContainer .miniTimeline {
+    width: 0.3vw;
+    position: relative;
+    min-height: 15vh;
     background: #219ebc;
-    transform: translateX(-50%) scale(1.1);
+    border-radius: 10px;
+}
+
+/* Skills design */
+
+.timelineContainer .skills {
+    width: fit-content;
+    height:fit-content;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+.timelineContainer .title {
+    font-size: 4vw;
+    text-shadow: 10px 10px 20px #16161aa8;
+}
+.timelineContainer .skills .schema {
+    background: url(./assets/imageonline.png) no-repeat center/cover;
+    width: 30vw;
+    height: 30vw;
+    margin-top: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px #131416;
+}
+
+/* Design second mini timeline */
+
+.timelineContainer .miniTimeline2 {
+    width: 0.3vw;
+    position: relative;
+    min-height: 15vh;
+    background: #219ebc;
+    border-radius: 10px;
+}
+
+/* Design about section */
+
+.about {
+    border: 1px solid green;
 }
 
 /* Design footer */
@@ -284,7 +428,7 @@ footer {
     margin-left: 50%;
     transform: translateX(-50%);
     margin-top: 5rem;
-    border-top: 1px solid rgba(182, 66, 46, 0.767);
+    border-top: 1px solid #b6422ec4;
     animation: piedpage 4s linear infinite;
 }
 @keyframes piedpage {
@@ -333,97 +477,4 @@ footer .footer .logo3:hover{
     0%{transform: rotate(15deg);}
     50%{transform: rotate(-15deg);}
     100%{transform: rotate(15deg);}
-}
-
-/* Design resume.html */
-
-/* .resume {
-    border: 1px solid red;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #f5f5fa;
-}
-.resume h1 {
-    border: 1px solid blue;
-    width: fit-content;
-    font-size: 8vw;
-    margin: 4rem auto;
-    margin-bottom: 2rem;
-    text-shadow: 10px 10px 20px #16161aa8;
-}
-.resume .resumeParagraph {
-    border: 1px solid greenyellow;
-    width: 50%;
-    padding: 1.5rem;
-    font-size: 1.3vw;
-    font-weight: lighter;
-}
-.resumeImage {
-    border: 1px solid red;
-    width: 50%;
-    height: 100px;
-    padding: 1.5rem;
-} */
-
-.resume {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    width: 100%;
-    color: #f5f5fa;
-    }
-    
-.resume h1 {
-    grid-area: 1 / 2 / 2 / 5;
-    width: fit-content;
-    margin: 2rem auto;
-    text-shadow: 10px 10px 20px #16161aa8;
-    font-size: 6vw;
-}
-.resume h1 span {
-    grid-area: 1/2/2/5;
-    width: fit-content;
-    text-shadow: 10px 10px 20px #16161aa8;
-    font-size: 6vw;
-    animation: none;
-    text-transform: lowercase;
-    color:#219ebc;
-    margin: 0;
-    padding: 0;
-}
-.resumeParagraph {
-    grid-area: 2 / 1 / 6 / 4;
-    font-size: 1.3vw;
-    background: #2d2d34;
-    box-shadow: 10px 10px 20px #16161aa8;
-    font-weight: lighter;
-    margin-left: 1.5rem;
-    padding: 1.5rem;
-    border-radius: 20px;
-    height: fit-content;
-    text-align: center;
-}
-.resumeImage {
-    grid-area: 2 / 4 / 6 / 6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30vw;
-    margin-left: 5rem;
-    background: #34353c;
-    box-shadow: 10px 10px 20px #16161aa8;
-    height: 30vw;
-    border-radius: 25% 10%;
-}
-.imageContainer {
-    width: 25vw;
-    height: 25vw;
-    box-shadow: 10px 10px 20px #16161aa8;
-    border-radius: 25% 10%;
-    opacity: 0.75;
-    background: url(./assets/code.jpg) no-repeat center/cover;
 }

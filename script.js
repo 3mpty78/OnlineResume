@@ -10,6 +10,7 @@ window.addEventListener("load", () => {
   firstName.style.marginTop = "0";
   border.style.width = "75%";
 });
+
 window.addEventListener("load", () => {
   loader.classList.add("fondu-out");
 });

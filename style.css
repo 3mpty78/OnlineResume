@@ -69,7 +69,8 @@ span {
     transition: opacity 0.4s ease-out;
     z-index: 0;
 }
-/* Title design */
+
+/* Title design + PP */
 
 header {
     display:flex;
@@ -96,6 +97,7 @@ header h2.first {
     margin-left: 15%;
     transition: 1s ease-in-out;
 }
+
 header .imgContainer {
     background: url(./assets/pp.jpg) no-repeat center/cover;
     width: 22vw;
@@ -331,4 +333,97 @@ footer .footer .logo3:hover{
     0%{transform: rotate(15deg);}
     50%{transform: rotate(-15deg);}
     100%{transform: rotate(15deg);}
+}
+
+/* Design resume.html */
+
+/* .resume {
+    border: 1px solid red;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #f5f5fa;
+}
+.resume h1 {
+    border: 1px solid blue;
+    width: fit-content;
+    font-size: 8vw;
+    margin: 4rem auto;
+    margin-bottom: 2rem;
+    text-shadow: 10px 10px 20px #16161aa8;
+}
+.resume .resumeParagraph {
+    border: 1px solid greenyellow;
+    width: 50%;
+    padding: 1.5rem;
+    font-size: 1.3vw;
+    font-weight: lighter;
+}
+.resumeImage {
+    border: 1px solid red;
+    width: 50%;
+    height: 100px;
+    padding: 1.5rem;
+} */
+
+.resume {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    color: #f5f5fa;
+    }
+    
+.resume h1 {
+    grid-area: 1 / 2 / 2 / 5;
+    width: fit-content;
+    margin: 2rem auto;
+    text-shadow: 10px 10px 20px #16161aa8;
+    font-size: 6vw;
+}
+.resume h1 span {
+    grid-area: 1/2/2/5;
+    width: fit-content;
+    text-shadow: 10px 10px 20px #16161aa8;
+    font-size: 6vw;
+    animation: none;
+    text-transform: lowercase;
+    color:#219ebc;
+    margin: 0;
+    padding: 0;
+}
+.resumeParagraph {
+    grid-area: 2 / 1 / 6 / 4;
+    font-size: 1.3vw;
+    background: #2d2d34;
+    box-shadow: 10px 10px 20px #16161aa8;
+    font-weight: lighter;
+    margin-left: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    height: fit-content;
+    text-align: center;
+}
+.resumeImage {
+    grid-area: 2 / 4 / 6 / 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    margin-left: 5rem;
+    background: #34353c;
+    box-shadow: 10px 10px 20px #16161aa8;
+    height: 30vw;
+    border-radius: 25% 10%;
+}
+.imageContainer {
+    width: 25vw;
+    height: 25vw;
+    box-shadow: 10px 10px 20px #16161aa8;
+    border-radius: 25% 10%;
+    opacity: 0.75;
+    background: url(./assets/code.jpg) no-repeat center/cover;
 }

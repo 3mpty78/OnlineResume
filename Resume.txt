@@ -1,0 +1,22 @@
+Bonjour et bienvenue !
+
+Je m'appel Aurélien, j'ai 26 ans et suis passionné d'informatique et de développement.
+Depuis a peu près 1 an je participe activement au développement de différents projets
+tels que des jeux videos ou des sites web afin d'apprendre continuellement de nouvelles choses !
+
+J'aime beaucoup passer mon temps libre devant mon ecran à "coder des trucs". D'ailleurs, j'ai recemment
+développer trois sites web pour m'exercer à l'aide de HTML, CSS et JavaScript (dont celui sur lequel
+vous lisez ces lignes.). Malheureusement, les deux autres ne sont pas en ligne.
+
+Jusqu'a présent, j'ai tout appris en autodidacte, que ce soit HTML, CSS, JavaScript et les rudiments de Python.
+Pour ça, il a fallu s'armer de patience et de persévérance pour pouvoir apprendre mais surtout commprendre
+les principes de ces langages et leur fonctionnement.
+
+Heureusement pour moi, ce sont des valeurs que j'ai su acquérir au travers de mes différentes expériences 
+professionnelles bien avant de commencer à développer mes premiers sites.
+
+En effet, en tant qu'ancien militaire, rigueur et détermination sont des principes qui rythment ma vie depuis 
+plus de 6 ans aujourd'hui.
+
+N'hésitez pas à me contacter si vous voulez en savoir un peu plus à mon sujet ! 
+Bisous <3

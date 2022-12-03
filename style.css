@@ -84,18 +84,18 @@ header h2 {
 header h2.last {
     color: #219ebc;
     text-shadow: 10px 10px 20px #16161aa8;
-    margin-top: -10rem;
-    margin-left: 5rem;
-    transition: 1s ease-in-out;
+    margin-top: 5rem;
+    margin-left: -50rem;
+    transition: 2s cubic-bezier(.5, 0, 0, 1);
 }
 header h2.first {
     color: #f5f5fa;
     font-weight:lighter;
     text-shadow: 10px 10px 20px #16161aa8;
-    margin-top: -10rem;
+    margin-top: 0;
     margin-bottom: 2.5rem;
-    margin-left: 15%;
-    transition: 1s ease-in-out;
+    margin-left: -35%;
+    transition: 2s cubic-bezier(.5, 0, 0, 1);
 }
 
 header .imgContainer {
@@ -110,6 +110,7 @@ header .imgContainer {
     box-shadow: 6px 6px 20px #16161aa8;
     animation: kisuke 3s linear infinite both;
 }
+
 @keyframes kisuke {
     0%{transform: rotate(5deg);}
     50%{transform: rotate(-5deg);}
@@ -237,7 +238,17 @@ header .imgContainer {
     filter: invert(1) opacity(0.75);
 }
 
-/* Design section realisations */
+.reveal {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+/* Design realisations */
 
 .timelineContainer .realisations {
     position: relative;
@@ -255,11 +266,6 @@ header .imgContainer {
     text-shadow: 10px 10px 20px #16161aa8;
     margin-top: 4%;
     margin-bottom: 5rem;
-
-    box-shadow: 0 -5px 20px 0 #f5f5fa1a;
-    border-radius: 25px;
-    transition: 0.4s ease;
-    animation: shadowAround 2s linear infinite both;
 }
 .realisations h2 {
     padding: 1.5rem;
@@ -278,7 +284,9 @@ header .imgContainer {
     flex-direction: column;
     align-items: center;
     padding: 1.5rem;
+    margin: 5rem 0;
     grid-area: 2 / 1 / 3 / 2;
+    transition: 0.4s;
 }
 .realisations .firstCard .zenifineContainer {
     background: url(./assets/zenifine.png) no-repeat left/cover;
@@ -295,6 +303,8 @@ header .imgContainer {
     text-align: center;
     padding: 1.5rem;
     grid-area: 2 / 2 / 3 / 3;
+    margin: 5rem 5rem;
+    transition: .4s;
 }
 .realisations .secondCard .weeatContainer {
     background: url(./assets/weeat.png) no-repeat center/cover;
@@ -311,6 +321,8 @@ header .imgContainer {
     text-align: center;
     padding: 1.5rem;
     grid-area: 2 / 3 / 3 / 4;
+    margin: 5rem 0;
+    transition: .4s;
 }
 .realisations .thirdCard .gameContainer {
     background: url(./assets/game.png) no-repeat center/cover;
@@ -318,7 +330,6 @@ header .imgContainer {
     width: 22.5vw;
     height: 15vw;
     filter: grayscale(0);
-    transition: 0.4s ease-in-out;
 }
 
 .realisations .firstCard h3, 
@@ -347,18 +358,27 @@ header .imgContainer {
     75%{box-shadow: -10px 0 20px 0 #f5f5fa1a;}
     100%{box-shadow: 0 -10px 20px 0 #f5f5fa1a;}
 }
-.realisations .firstCard .zenifineContainer:hover,
-.realisations .secondCard .weeatContainer:hover {
+.realisations .firstCard:hover,
+.realisations .secondCard:hover {
     cursor: not-allowed;
-    transform: scale(1.2);
-    filter: grayscale(0.75);
+    transform: scale(1.05);
+    filter: grayscale(1);
+    box-shadow: 0 -5px 20px 0 #f5f5fa1a;
+    border-radius: 25px;
+    transition: 0.4s ease;
+    animation: shadowAround 2s linear infinite both;
 }
-.realisations .thirdCard .gameContainer:hover{
+.realisations .thirdCard:hover{
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.05);
     box-shadow: 10px 10px 20px #16161aa8;
     filter: blur(0) grayscale(0);
+    box-shadow: 0 -5px 20px 0 #f5f5fa1a;
+    border-radius: 25px;
+    animation: shadowAround 2s linear infinite both;
 }
+
+
 
 /* Mini timeline design */
 
@@ -408,7 +428,44 @@ header .imgContainer {
 /* Design about section */
 
 .about {
-    border: 1px solid green;
+    color: #f5f5fa;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+.about h2 {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 4vw;
+    text-shadow: 10px 10px 20px #16161aa8;
+    margin: -3.5rem auto;
+}
+.about h2 span {
+    animation: none;
+    font-size: 4vw;
+    text-transform: lowercase;
+    color: #b6422ec4;
+}
+.about p {
+    grid-area: 2 / 1 / 3 / 2;
+    font-size: 1.2vw;
+    margin-top: 5rem;
+    text-align: center;
+    font-weight: lighter;
+}
+.about .pictureContainer {
+    grid-area: 2 / 2 / 3 / 3;
+    background: url(./assets/myself.jpg) no-repeat center/cover;
+    width: 20vw;
+    height: 30vw;
+    margin: auto 1.5rem;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    box-shadow: 10px 10px 20px #16161aa8;
 }
 
 /* Design footer */

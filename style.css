@@ -11,7 +11,6 @@
 }
 
 body {
-    /* background: linear-gradient(90deg,#22232a 0%, #353541 80%); */
     background: linear-gradient(135deg, hsla(232, 11%, 15%, 1) 30%, hsla(0, 5%, 16%, 1) 100%);
     min-height: 100vh;
 }
@@ -100,7 +99,7 @@ header h2.first {
 }
 
 header .imgContainer {
-    /* background: url(./assets/pp.jpg) no-repeat center/cover; */
+    background: url(./assets/pp.jpg) no-repeat center/cover;
     width: 22vw;
     height: 22vw;
     border-radius: 50%;
@@ -460,7 +459,7 @@ header .imgContainer {
 }
 .about .pictureContainer {
     grid-area: 2 / 2 / 3 / 3;
-    /* background: url(./assets/myself.jpg) no-repeat center/cover; */
+    background: url(./assets/myself.jpg) no-repeat center/cover;
     width: 20vw;
     height: 30vw;
     margin: auto 1.5rem;

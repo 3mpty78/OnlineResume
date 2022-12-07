@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -433,8 +434,8 @@ header .imgContainer {
     padding: 1.5rem;
 
     display: grid;
-    grid-template-columns: repeat(2,0fr);
-    grid-template-rows: repeat(2,0fr);
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
     grid-column-gap: 0;
     grid-row-gap: 0;
 }
@@ -465,6 +466,40 @@ header .imgContainer {
     margin: auto 1.5rem;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
     box-shadow: 10px 10px 20px #16161aa8;
+}
+
+/* Back on top btn design */
+
+.backOnTop {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 10rem;
+    right: 2vw;
+    transition: 1s;
+    opacity: 0;
+}
+.backOnTop .arrowContainer {
+    width: 5vw;
+    height: 5vw;
+    filter: invert(1) opacity(0.75);
+    background-color: #219ebc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.backOnTop .arrowContainer img {
+    width: 3vw;
+    height: 3vw;
+}
+.backOnTop img:hover {
+    cursor: pointer;
+}
+.appear {
+    opacity: 1;
 }
 
 /* Design footer */

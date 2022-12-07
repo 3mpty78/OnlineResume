@@ -4,6 +4,7 @@ const border = document.querySelector(".border");
 const loader = document.querySelector(".loaderContainer");
 const game = document.querySelector(".gameContainer");
 const adress = document.querySelector(".home");
+const btn = document.querySelector(".backOnTop");
 
 // Timeline animation
 
@@ -39,8 +40,22 @@ window.addEventListener("load", () => {
   loader.classList.add("fondu-out");
 });
 
+// Scroll events
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY <= 500) {
+    btn.classList.remove("appear");
+  } else {
+    btn.classList.add("appear");
+  }
+});
+
 // Click events
 
 game.addEventListener("click", () => {
   window.open("https://3mpty78.github.io");
+});
+
+btn.addEventListener("click", () => {
+  window.scrollTo(0, 0);
 });

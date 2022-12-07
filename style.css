@@ -99,7 +99,7 @@ header h2.first {
 }
 
 header .imgContainer {
-    background: url(./assets/pp.jpg) no-repeat center/cover;
+    /* background: url(./assets/pp.jpg) no-repeat center/cover; */
     width: 22vw;
     height: 22vw;
     border-radius: 50%;
@@ -253,8 +253,8 @@ header .imgContainer {
 .timelineContainer .realisations {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3);
-    grid-template-rows: repeat(2);
+    grid-template-columns: repeat(3,0fr);
+    grid-template-rows: repeat(2, 0fr);
     grid-column-gap: 0;
     grid-row-gap: 0;
     color: #f5f5fa;
@@ -330,6 +330,7 @@ header .imgContainer {
     width: 22.5vw;
     height: 15vw;
     filter: grayscale(0);
+    box-shadow: 10px 10px 20px #16161aa8;
 }
 
 .realisations .firstCard h3, 
@@ -377,8 +378,6 @@ header .imgContainer {
     border-radius: 25px;
     animation: shadowAround 2s linear infinite both;
 }
-
-
 
 /* Mini timeline design */
 
@@ -434,8 +433,8 @@ header .imgContainer {
     padding: 1.5rem;
 
     display: grid;
-    grid-template-columns: repeat(2);
-    grid-template-rows: repeat(2);
+    grid-template-columns: repeat(2,0fr);
+    grid-template-rows: repeat(2,0fr);
     grid-column-gap: 0;
     grid-row-gap: 0;
 }
@@ -460,7 +459,7 @@ header .imgContainer {
 }
 .about .pictureContainer {
     grid-area: 2 / 2 / 3 / 3;
-    background: url(./assets/myself.jpg) no-repeat center/cover;
+    /* background: url(./assets/myself.jpg) no-repeat center/cover; */
     width: 20vw;
     height: 30vw;
     margin: auto 1.5rem;

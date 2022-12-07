@@ -44,6 +44,3 @@ window.addEventListener("load", () => {
 game.addEventListener("click", () => {
   window.open("https://3mpty78.github.io");
 });
-// adress.addEventListener("click", () => {
-//   alert("31 Cité de Bel Air, 29410 Saint-Thégonnec Loc-Eguiner");
-// });
